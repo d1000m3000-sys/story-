@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Story+</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <h1>Story<span>+</span></h1>
+    <button class="profile-btn">👤</button>
+  </header>
+
+  <!-- Categories -->
+  <div class="categories">
+    <button>🔥 ترند</button>
+    <button>❤️ حب</button>
+    <button>💔 حزن</button>
+    <button>🕌 ديني</button>
+    <button>⚡ تحفيز</button>
+  </div>
+
+  <!-- Stories Grid -->
+  <main class="grid" id="grid"></main>
+
+  <!-- Viewer Modal -->
+  <div class="viewer" id="viewer">
+    <div class="viewer-content">
+      <img id="viewerImg" />
+      <div class="actions">
+        <button onclick="downloadImg()">⬇️ تحميل</button>
+        <button onclick="shareImg()">🔗 مشاركة</button>
+        <button onclick="closeViewer()">❌ إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
