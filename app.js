@@ -1,10 +1,12 @@
 const grid = document.getElementById("stories");
 
-async function loadStories() {
-  const res = await fetch("stories.json");
-  const data = await res.json();
+// جلب البيانات من التخزين
+let stories = JSON.parse(localStorage.getItem("stories")) || [];
 
-  data.forEach(story => {
+function render() {
+  grid.innerHTML = "";
+
+  stories.forEach(story => {
     grid.innerHTML += `
       <div class="card">
         <img src="${story.image}">
@@ -14,4 +16,4 @@ async function loadStories() {
   });
 }
 
-loadStories();
+render();
