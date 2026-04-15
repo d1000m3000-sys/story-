@@ -1,44 +1,17 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: #0f0f0f;
   color: white;
 }
 
-/* Top bar */
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px;
   background: #151515;
-  position: sticky;
-  top: 0;
 }
 
-.topbar h1 span {
-  color: #00ff99;
-}
-
-/* Categories */
-.categories {
-  display: flex;
-  overflow-x: auto;
-  padding: 10px;
-  gap: 10px;
-}
-
-.categories button {
-  background: #222;
-  border: none;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -48,60 +21,14 @@ body {
 
 .card {
   background: #1a1a1a;
-  border-radius: 15px;
+  border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: scale(1.03);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
 }
 
 .card p {
   padding: 10px;
-  margin: 0;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* Viewer */
-.viewer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.viewer-content {
-  text-align: center;
-}
-
-.viewer img {
-  max-width: 90%;
-  max-height: 70vh;
-  border-radius: 10px;
-}
-
-.actions {
-  margin-top: 10px;
-}
-
-.actions button {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
 }
