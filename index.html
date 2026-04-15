@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story+</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- PWA PART 3: Manifest -->
   <link rel="manifest" href="manifest.json">
+
+  <!-- لون التطبيق -->
+  <meta name="theme-color" content="#0f0f0f">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,6 +24,15 @@
 <div id="stories" class="grid"></div>
 
 <script src="app.js"></script>
+
+<!-- PWA PART 4: Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(() => console.log("SW Registered"))
+    .catch(err => console.log("SW Error", err));
+}
+</script>
 
 </body>
 </html>
