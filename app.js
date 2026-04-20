@@ -1,19 +1,19 @@
 const grid = document.getElementById("stories");
 
-// جلب البيانات من التخزين
-let stories = JSON.parse(localStorage.getItem("stories")) || [];
+const stories = [];
 
-function render() {
-  grid.innerHTML = "";
-
-  stories.forEach(story => {
-    grid.innerHTML += `
-      <div class="card">
-        <img src="${story.image}">
-        <p>${story.title}</p>
-      </div>
-    `;
+for (let i = 1; i <= 100; i++) {
+  stories.push({
+    title: "حالة رقم " + i,
+    image: `https://picsum.photos/400/600?random=${i}`
   });
 }
 
-render();
+stories.forEach(story => {
+  grid.innerHTML += `
+    <div class="card">
+      <img src="${story.image}">
+      <p>${story.title}</p>
+    </div>
+  `;
+});
